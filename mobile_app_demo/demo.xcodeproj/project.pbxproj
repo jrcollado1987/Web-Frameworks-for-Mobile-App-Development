@@ -34,6 +34,9 @@
 		0761939914D1FFF600332E9D /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0761939814D1FFF600332E9D /* PhoneGap.plist */; };
 		0761939D14D1FFF600332E9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0761939C14D1FFF600332E9D /* AppDelegate.m */; };
 		076193A614D2001400332E9D /* www in Resources */ = {isa = PBXBuildFile; fileRef = 076193A514D2001400332E9D /* www */; };
+		7280E50F1A09E8B500056C08 /* build in Resources */ = {isa = PBXBuildFile; fileRef = 7280E50C1A09E8B500056C08 /* build */; };
+		7280E5101A09E8B500056C08 /* demo in Resources */ = {isa = PBXBuildFile; fileRef = 7280E50D1A09E8B500056C08 /* demo */; };
+		7280E5111A09E8B500056C08 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 7280E50E1A09E8B500056C08 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		0761939C14D1FFF600332E9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		0761939F14D1FFF600332E9D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		076193A514D2001400332E9D /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		7280E50C1A09E8B500056C08 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
+		7280E50D1A09E8B500056C08 /* demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = demo; sourceTree = "<group>"; };
+		7280E50E1A09E8B500056C08 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 		0761934A14D1FFF600332E9D = {
 			isa = PBXGroup;
 			children = (
+				7280E50C1A09E8B500056C08 /* build */,
+				7280E50D1A09E8B500056C08 /* demo */,
+				7280E50E1A09E8B500056C08 /* www */,
 				076193A514D2001400332E9D /* www */,
 				0761937614D1FFF600332E9D /* demo */,
 				0761935B14D1FFF600332E9D /* Frameworks */,
@@ -259,6 +268,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					0761935714D1FFF600332E9D = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 0761934F14D1FFF600332E9D /* Build configuration list for PBXProject "demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -284,14 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0761937B14D1FFF600332E9D /* InfoPlist.strings in Resources */,
+				7280E5101A09E8B500056C08 /* demo in Resources */,
 				0761938514D1FFF600332E9D /* Localizable.strings in Resources */,
 				0761938914D1FFF600332E9D /* Localizable.strings in Resources */,
 				0761938C14D1FFF600332E9D /* icon.png in Resources */,
 				0761938E14D1FFF600332E9D /* icon@2x.png in Resources */,
 				0761939014D1FFF600332E9D /* icon-72.png in Resources */,
 				0761939314D1FFF600332E9D /* Default.png in Resources */,
+				7280E5111A09E8B500056C08 /* www in Resources */,
 				0761939514D1FFF600332E9D /* Default@2x.png in Resources */,
 				0761939714D1FFF600332E9D /* Capture.bundle in Resources */,
+				7280E50F1A09E8B500056C08 /* build in Resources */,
 				0761939914D1FFF600332E9D /* PhoneGap.plist in Resources */,
 				076193A614D2001400332E9D /* www in Resources */,
 			);
@@ -382,7 +403,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -394,13 +415,13 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -410,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -417,6 +439,7 @@
 				GCC_PREFIX_HEADER = "demo/demo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "demo/demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -428,7 +451,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -437,6 +460,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx10.10]" = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = /Users/Shared/PhoneGap/Frameworks;
@@ -444,6 +469,7 @@
 				GCC_PREFIX_HEADER = "demo/demo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
 				INFOPLIST_FILE = "demo/demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -455,7 +481,7 @@
 					/usr/lib/libSystem.B.dylib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -471,7 +497,7 @@
 				076193A114D1FFF600332E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		076193A214D1FFF600332E9D /* Build configuration list for PBXNativeTarget "demo" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +506,7 @@
 				076193A414D1FFF600332E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
